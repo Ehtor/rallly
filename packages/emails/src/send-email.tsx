@@ -60,7 +60,7 @@ const getTransport = () => {
         auth: hasAuth
           ? {
               user: process.env.SMTP_USER,
-              pass: process.env.SMTP_PWD,
+              pass: "'"+process.env.SMTP_PWD+"'",
             }
           : undefined,
         tls:
